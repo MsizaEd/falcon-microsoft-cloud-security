@@ -1,0 +1,17 @@
+# Local reports may contain device-specific information.
+EndpointSecurityReadiness.json
+*.local.json
+
+# Credentials and secrets
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.pem
+*.key
+
+# Operating system and editor files
+.DS_Store
+.idea/
+.vscode/
