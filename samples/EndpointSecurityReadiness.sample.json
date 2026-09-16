@@ -1,0 +1,51 @@
+{
+  "SampleData": true,
+  "ExecutionStatus": "Demonstration only - not produced by a Windows test run",
+  "Environment": {
+    "OperatingSystem": "Windows 11 Pro",
+    "Version": "Example value",
+    "DeviceIdentity": "REDACTED"
+  },
+  "GeneratedAtUtc": "YYYY-MM-DDTHH:MM:SSZ",
+  "Device": {
+    "WindowsProductName": "Windows 11 Pro",
+    "WindowsVersion": "Example value",
+    "OsBuildNumber": "Example value"
+  },
+  "Defender": {
+    "AntivirusEnabled": true,
+    "RealTimeProtectionEnabled": true,
+    "BehaviorMonitorEnabled": true,
+    "IoavProtectionEnabled": true,
+    "AntivirusSignatureLastUpdated": "REDACTED"
+  },
+  "Firewall": [
+    {
+      "Name": "Domain",
+      "Enabled": true,
+      "DefaultInboundAction": "Block",
+      "DefaultOutboundAction": "Allow"
+    },
+    {
+      "Name": "Private",
+      "Enabled": true,
+      "DefaultInboundAction": "Block",
+      "DefaultOutboundAction": "Allow"
+    },
+    {
+      "Name": "Public",
+      "Enabled": true,
+      "DefaultInboundAction": "Block",
+      "DefaultOutboundAction": "Allow"
+    }
+  ],
+  "BitLocker": [
+    {
+      "MountPoint": "C:",
+      "VolumeStatus": "FullyEncrypted",
+      "ProtectionStatus": "On",
+      "EncryptionMethod": "Example value"
+    }
+  ],
+  "EntraJoinStatus": "REDACTED - include only sanitised join-state lines in a real report"
+}

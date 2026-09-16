@@ -1,5 +1,7 @@
 # Validation checklist
 
+> **Status: Demonstration template.** This checklist has not been executed against the Falcon Projects tenant. Empty boxes mean “not evidenced,” not “failed.” A completed copy should be added only after a controlled validation run.
+
 ## Identity and access
 
 - [ ] Users can complete multifactor authentication.

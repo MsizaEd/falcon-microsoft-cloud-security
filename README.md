@@ -1,18 +1,61 @@
-# Microsoft Cloud Security & Endpoint Deployment
+# Microsoft Cloud Administration & Endpoint Security Portfolio
 
-A sanitized portfolio case study based on Microsoft cloud and endpoint work completed for Falcon Projects. It demonstrates a practical approach to deploying and managing:
+A sanitised portfolio case study based on Microsoft cloud administration work for Falcon Projects, together with clearly labelled endpoint-security implementation examples.
 
-- Microsoft Intune and Endpoint Manager
-- Microsoft Defender for Endpoint
-- Microsoft Entra ID
-- Conditional Access and multifactor authentication
-- Device compliance and security baselines
+> No names, email addresses, tenant identifiers, device serial numbers, credentials, screenshots, or production exports are included.
 
-> This repository contains no customer data, credentials, tenant identifiers, production exports, or confidential configuration. The examples are reusable templates created for portfolio and demonstration purposes.
+## Evidence status
 
-## Project objectives
+| Status | Meaning |
+| --- | --- |
+| **Verified current state** | Observed in the live Microsoft 365 tenant or its cloud-hosted asset inventory on 16 September 2026 |
+| **Completed — practitioner statement** | Work described by the practitioner but not attributable from the available portal history |
+| **Demonstration** | Reusable design, checklist, or code example; not evidence that it ran in production |
+| **Planned / unverified** | Requires tenant records, licensing, deployment reports, or test output before it can be presented as completed |
 
-The deployment was designed to improve device visibility, standardize endpoint configuration, strengthen identity controls, and provide a repeatable response process for endpoint threats.
+## Verified current state
+
+The evidence review confirmed:
+
+- A live Microsoft 365 tenant containing approximately **45 user identities**.
+- Approximately **27 Microsoft 365 Business Basic assignments** visible in the tenant.
+- A mixture of named, role-based, shared, external, licensed, and unlicensed identities.
+- Administrative access to user, licence, product, and service-request views.
+- A maintained cloud-hosted inventory linking organisational roles to company-device allocation and asset information.
+- Individual Exchange Online and Planner/Project licensing in addition to the main Business Basic estate.
+
+The public figures are deliberately rounded or aggregated. See the [sanitised evidence summary](docs/evidence-summary.md).
+
+## Completed — practitioner statement
+
+The following reflects hands-on responsibilities described by the practitioner. The live tenant confirms the environment exists, but the available views do not provide historical change attribution:
+
+- Microsoft 365 user and licence administration.
+- Creation and maintenance of role-based and shared organisational identities.
+- Maintenance of an employee and company-device asset inventory.
+- Day-to-day access and account support for the Falcon Projects environment.
+
+## Demonstration material
+
+These artefacts demonstrate implementation knowledge; they are not presented as production exports:
+
+- A reference architecture connecting Entra ID, Intune, Defender for Endpoint, compliance, and Conditional Access.
+- A phased endpoint-security implementation plan.
+- A reusable deployment validation checklist.
+- A read-only PowerShell endpoint-readiness script.
+- A synthetic example showing the script's intended report structure.
+
+## Planned / not yet verified
+
+The evidence reviewed for this repository did **not** establish:
+
+- Microsoft Intune enrolment or compliance-policy deployment counts.
+- Microsoft Defender for Endpoint onboarding, alert, or remediation results.
+- Conditional Access or MFA policy implementation results.
+- Execution of the readiness script on a Windows endpoint.
+- Level 3 support responsibility or advanced PowerShell expertise.
+
+These areas remain portfolio demonstrations until sanitised production evidence or a controlled Windows test is added.
 
 ## Solution overview
 
@@ -28,49 +71,30 @@ flowchart LR
     A --> R[Approved access to Microsoft 365]
 ```
 
-## Implementation areas
-
-### Identity and access
-
-- Organized users and security groups in Microsoft Entra ID.
-- Applied multifactor authentication and Conditional Access principles.
-- Used role-based access and least-privilege administration.
-- Planned emergency-access and account-recovery procedures.
-
-### Endpoint management
-
-- Established Windows device enrolment and assignment groups.
-- Defined configuration profiles and compliance requirements.
-- Planned application deployment and update rings.
-- Monitored non-compliant devices and remediation actions.
-
-### Endpoint security
-
-- Prepared devices for Microsoft Defender for Endpoint onboarding.
-- Applied antivirus, firewall, attack-surface-reduction, and endpoint-detection controls.
-- Documented alert triage, device isolation, investigation, and remediation steps.
-- Verified device health and security reporting.
-
-### Validation and handover
-
-- Tested deployment with a pilot group before broader rollout.
-- Recorded technical checks and acceptance criteria.
-- Documented operational monitoring and support procedures.
-- Produced a reusable readiness-reporting script.
+The diagram above is a **demonstration architecture**, not an export of the Falcon Projects tenant.
 
 ## Repository contents
 
-| Path | Description |
-| --- | --- |
-| [Architecture](docs/architecture.md) | Logical architecture and control flow |
-| [Implementation plan](docs/implementation-plan.md) | Phased deployment approach |
-| [Validation checklist](docs/validation-checklist.md) | Technical validation and handover checklist |
-| [Readiness script](scripts/Get-EndpointSecurityReadiness.ps1) | Read-only Windows endpoint readiness report |
+| Path | Status | Description |
+| --- | --- | --- |
+| [Evidence summary](docs/evidence-summary.md) | Verified current state | Sanitised scope, observations, and evidence boundaries |
+| [Troubleshooting case study](docs/troubleshooting-case-study.md) | Verified portfolio audit | Real evidence mismatch, diagnosis, corrective action, and validation |
+| [Architecture](docs/architecture.md) | Demonstration | Logical identity and endpoint-security architecture |
+| [Implementation plan](docs/implementation-plan.md) | Demonstration | Phased deployment approach |
+| [Validation checklist](docs/validation-checklist.md) | Demonstration | Acceptance template, not a completed test record |
+| [Readiness script](scripts/Get-EndpointSecurityReadiness.ps1) | Demonstration | Read-only Windows endpoint readiness report |
+| [Synthetic report](samples/EndpointSecurityReadiness.sample.json) | Demonstration | Example schema; not produced by a Windows execution |
 
-## Skills demonstrated
+## Skills represented
 
-Microsoft Intune · Microsoft Defender for Endpoint · Microsoft Entra ID · Conditional Access · Microsoft 365 · Endpoint security · Device compliance · PowerShell · Technical documentation
+Microsoft 365 administration · Identity lifecycle support · Licence administration · Asset inventory · Microsoft Entra ID concepts · Microsoft Intune concepts · Microsoft Defender for Endpoint concepts · Conditional Access concepts · PowerShell · Technical documentation
 
-## Important note
+## Evidence needed for the next revision
 
-This is a sanitized technical portfolio project. Exact customer architecture, policy values, device counts, security findings, and tenant-specific information are intentionally excluded.
+To promote the endpoint-security sections from demonstration to completed work, the repository needs:
+
+1. A sanitised Intune device or policy summary.
+2. A sanitised Defender device-onboarding or alert/remediation result.
+3. A Conditional Access or MFA result with tenant identifiers removed.
+4. A real Windows execution of the readiness script with device-identifying values removed.
+5. A completed endpoint troubleshooting case with the issue, diagnosis, change, and validation result.
