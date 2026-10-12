@@ -1,5 +1,7 @@
 # Sanitised evidence summary
 
+This is the historical 16 September review. The [12 October macOS pilot follow-up](macos-pilot-status.md) records subsequently verified Business Premium licensing, fresh Intune enrolment and local Defender protection. The evidence boundaries below apply to the September review.
+
 ## Review record
 
 - **Review date:** 16 September 2026

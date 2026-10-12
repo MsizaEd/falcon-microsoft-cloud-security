@@ -2,6 +2,12 @@
 EndpointSecurityReadiness.json
 *.local.json
 
+# Tenant-specific onboarding material and installers
+*Onboarding*.zip
+*Onboarding*.sh
+*.mobileconfig
+*.pkg
+
 # Credentials and secrets
 .env
 .env.*

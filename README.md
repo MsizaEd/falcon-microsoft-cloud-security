@@ -6,14 +6,18 @@ A sanitised portfolio case study based on Microsoft cloud administration work fo
 
 ## Evidence status
 
+### Current deployment follow-up
+
+A controlled macOS pilot now has verified fresh Intune enrolment and check-in, compliant status in Company Portal, Defender activation, healthy/licensed status, service connectivity, and a successful EICAR antivirus quarantine test. See the [12 October 2026 pilot status](docs/macos-pilot-status.md) and [sanitised validation record](samples/DefenderMac.validation.json). Explicit pilot-policy results and Defender cloud alert visibility remain unverified. Security defaults are enabled; the [Conditional Access migration design](docs/conditional-access-migration.md) is prepared but not deployed. The September observations below are retained as a historical review.
+
 | Status | Meaning |
 | --- | --- |
-| **Verified current state** | Observed in the live Microsoft 365 tenant or its cloud-hosted asset inventory on 16 September 2026 |
+| **Verified current state / pilot** | Observed during the dated September tenant review or October macOS pilot validation |
 | **Completed — practitioner statement** | Work described by the practitioner but not attributable from the available portal history |
 | **Demonstration** | Reusable design, checklist, or code example; not evidence that it ran in production |
 | **Planned / unverified** | Requires tenant records, licensing, deployment reports, or test output before it can be presented as completed |
 
-## Verified current state
+## September tenant review
 
 The evidence review confirmed:
 
@@ -45,17 +49,17 @@ These artefacts demonstrate implementation knowledge; they are not presented as 
 - A read-only PowerShell endpoint-readiness script.
 - A synthetic example showing the script's intended report structure.
 
-## Planned / not yet verified
+## Evidence boundaries and remaining validation
 
-The evidence reviewed for this repository did **not** establish:
+The September review did not establish endpoint deployment. The October revision verifies one enrolled Mac and its local Defender protection. It still does **not** establish:
 
-- Microsoft Intune enrolment or compliance-policy deployment counts.
-- Microsoft Defender for Endpoint onboarding, alert, or remediation results.
+- Successful application of the named pilot compliance/configuration policies, or an estate-wide Intune rollout.
+- Defender cloud device inventory, alert delivery, EDR detection, or incident remediation results.
 - Conditional Access or MFA policy implementation results.
 - Execution of the readiness script on a Windows endpoint.
 - Level 3 support responsibility or advanced PowerShell expertise.
 
-These areas remain portfolio demonstrations until sanitised production evidence or a controlled Windows test is added.
+These remaining areas retain demonstration or planned status. The verified Mac results are recorded separately; the Windows readiness script remains a demonstration.
 
 ## Solution overview
 
@@ -78,6 +82,9 @@ The diagram above is a **demonstration architecture**, not an export of the Falc
 | Path | Status | Description |
 | --- | --- | --- |
 | [Evidence summary](docs/evidence-summary.md) | Verified current state | Sanitised scope, observations, and evidence boundaries |
+| [macOS pilot status](docs/macos-pilot-status.md) | Verified pilot / pending checks | Fresh Intune enrolment, Defender validation and real enrolment recovery case |
+| [macOS validation record](samples/DefenderMac.validation.json) | Verified pilot | Sanitised observed results; not synthetic data |
+| [Conditional Access migration](docs/conditional-access-migration.md) | Planned | Current security defaults and a scoped replacement design |
 | [Troubleshooting case study](docs/troubleshooting-case-study.md) | Verified portfolio audit | Real evidence mismatch, diagnosis, corrective action, and validation |
 | [Architecture](docs/architecture.md) | Demonstration | Logical identity and endpoint-security architecture |
 | [Implementation plan](docs/implementation-plan.md) | Demonstration | Phased deployment approach |
@@ -91,10 +98,10 @@ Microsoft 365 administration · Identity lifecycle support · Licence administra
 
 ## Evidence needed for the next revision
 
-To promote the endpoint-security sections from demonstration to completed work, the repository needs:
+The next revision needs:
 
-1. A sanitised Intune device or policy summary.
-2. A sanitised Defender device-onboarding or alert/remediation result.
-3. A Conditional Access or MFA result with tenant identifiers removed.
-4. A real Windows execution of the readiness script with device-identifying values removed.
-5. A completed endpoint troubleshooting case with the issue, diagnosis, change, and validation result.
+1. Named Intune policy results for the freshly enrolled Mac.
+2. Defender cloud device/alert evidence and a separate EDR test result.
+3. A licensed, approved Conditional Access migration and its validation results.
+4. An active-device rollout inventory and verified enrolment results for each added device.
+5. A real Windows script execution if the Windows demonstration is promoted to completed work.
